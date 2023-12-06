@@ -898,9 +898,8 @@ function wp_rss( $url, $num_items = -1 ) {
 
 		foreach ( (array) $rss->items as $item ) {
 			printf(
-				'<li><a href="%1$s" title="%2$s">%3$s</a></li>',
+				'<li><a href="%1$s" >%3$s</a></li>',
 				esc_url( $item['link'] ),
-				esc_attr( strip_tags( $item['description'] ) ),
 				esc_html( $item['title'] )
 			);
 		}
